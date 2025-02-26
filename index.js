@@ -22,7 +22,10 @@ function addAccount(accountCredentials) {
 
       //will check if the first three entries are non-empty strings
       if ((accountCredentials[i] == "") & (i < 3)) {
-        console.log(i + "blank");
+        return false;
+      }
+
+      if ((typeof accountCredentials[i] != "string") & (i < 3)) {
         return false;
       }
     }
@@ -68,7 +71,7 @@ export default { addAccount };
 
 //test
 //console.log(generateUniqueID("juan", "delacruz"));
-//console.log(generateUniqueID("Alan", "Turing"));
+//console.log(generateUniqueID("Alan", "asd"));
 //console.log(addAccount([12, 21, , 12]));
 //console.log(addAccount(["asd", "sada", "aturing@w3c.com", "dsa"]));
 //console.log(addAccount(["Alan", "Turing", "aturing@w3c.com", 58]));
