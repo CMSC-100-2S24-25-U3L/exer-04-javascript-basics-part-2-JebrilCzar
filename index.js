@@ -38,6 +38,8 @@ function addAccount(accountCredentials) {
       return false;
     }
 
+    //if the previouse conditional functions are not implemented,
+    //then it will proceed to create the account
     try {
       appendFileSync(
         "users.txt",
@@ -63,6 +65,7 @@ function addAccount(accountCredentials) {
 }
 
 export default { addAccount };
+
 //test
 //console.log(generateUniqueID("juan", "delacruz"));
 //console.log(generateUniqueID("Alan", "Turing"));
